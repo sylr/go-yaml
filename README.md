@@ -1,5 +1,23 @@
 # YAML support for the Go language
 
+sylr.dev/yaml/v3 fork disclaimer
+--------------------------------
+
+This module is a fork of [github.com/go-yaml/yaml/](https://github.com/go-yaml/yaml/).
+
+I forked it because in the v3 branch the choice has been made to indent sequences
+as everything else when marshaling, i.e.:
+
+```yaml
+lorem:
+- ipsum
+```
+became
+```yaml
+lorem:
+    - ipsum
+```
+
 Introduction
 ------------
 
@@ -36,31 +54,22 @@ supported since they're a poor design and are gone in YAML 1.2.
 Installation and usage
 ----------------------
 
-The import path for the package is *gopkg.in/yaml.v3*.
+The import path for the package is *sylr.dev/yaml/v3*.
 
 To install it, run:
 
-    go get gopkg.in/yaml.v3
+    go get sylr.dev/yaml/v3
 
 API documentation
 -----------------
 
-If opened in a browser, the import path itself leads to the API documentation:
-
-  - [https://gopkg.in/yaml.v3](https://gopkg.in/yaml.v3)
-
-API stability
--------------
-
-The package API for yaml v3 will remain stable as described in [gopkg.in](https://gopkg.in).
-
+[https://pkg.go.dev/sylr.dev/yaml/v3](https://pkg.go.dev/sylr.dev/yaml/v3)
 
 License
 -------
 
 The yaml package is licensed under the MIT and Apache License 2.0 licenses.
 Please see the LICENSE file for details.
-
 
 Example
 -------
@@ -72,7 +81,7 @@ import (
         "fmt"
         "log"
 
-        "gopkg.in/yaml.v3"
+        "sylr.dev/yaml/v3"
 )
 
 var data = `
@@ -147,4 +156,3 @@ b:
   - 3
   - 4
 ```
-
